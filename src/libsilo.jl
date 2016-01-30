@@ -832,8 +832,8 @@ function DBPutPointvar1(arg1::Ptr{DBfile},arg2::Ptr{UInt8},arg3::Ptr{UInt8},arg4
   ccall((:DBPutPointvar1,libsilo),Cint,(Ptr{DBfile},Ptr{UInt8},Ptr{UInt8},Ptr{Void},Cint,Cint,Ptr{DBoptlist}),arg1,arg2,arg3,arg4,arg5,arg6,arg7)
 end
 
-function DBPutQuadmesh(arg1::Ptr{DBfile},arg2::Ptr{UInt8},arg3::Ptr{Ptr{UInt8}},arg4::Ptr{Void},arg5::Ptr{Cint},arg6::Cint,arg7::Cint,arg8::Cint,arg9::Ptr{DBoptlist})
-  ccall((:DBPutQuadmesh,libsilo),Cint,(Ptr{DBfile},Ptr{UInt8},Ptr{Ptr{UInt8}},Ptr{Void},Ptr{Cint},Cint,Cint,Cint,Ptr{DBoptlist}),arg1,arg2,arg3,arg4,arg5,arg6,arg7,arg8,arg9)
+function DBPutQuadmesh(arg1::Ptr{DBfile},arg2::Ptr{UInt8},arg3::Ptr{Ptr{UInt8}},arg4::Ptr{Ptr{Void}},arg5::Ptr{Cint},arg6::Cint,arg7::Cint,arg8::Cint,arg9::Ptr{DBoptlist})
+  ccall((:DBPutQuadmesh,libsilo),Cint,(Ptr{DBfile},Ptr{UInt8},Ptr{Ptr{UInt8}},Ptr{Ptr{Void}},Ptr{Cint},Cint,Cint,Cint,Ptr{DBoptlist}),arg1,arg2,arg3,arg4,arg5,arg6,arg7,arg8,arg9)
 end
 
 function DBPutQuadvar(arg1::Ptr{DBfile},arg2::Ptr{UInt8},arg3::Ptr{UInt8},arg4::Cint,arg5::Ptr{Ptr{UInt8}},arg6::Ptr{Void},arg7::Ptr{Cint},arg8::Cint,arg9::Ptr{Void},arg10::Cint,arg11::Cint,arg12::Cint,arg13::Ptr{DBoptlist})
