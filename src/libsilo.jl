@@ -820,8 +820,8 @@ function DBPutMultimatspecies(arg1::Ptr{DBfile},arg2::Ptr{UInt8},arg3::Cint,arg4
   ccall((:DBPutMultimatspecies,libsilo),Cint,(Ptr{DBfile},Ptr{UInt8},Cint,Ptr{Ptr{UInt8}},Ptr{DBoptlist}),arg1,arg2,arg3,arg4,arg5)
 end
 
-function DBPutPointmesh(arg1::Ptr{DBfile},arg2::Ptr{UInt8},arg3::Cint,arg4::Ptr{Void},arg5::Cint,arg6::Cint,arg7::Ptr{DBoptlist})
-  ccall((:DBPutPointmesh,libsilo),Cint,(Ptr{DBfile},Ptr{UInt8},Cint,Ptr{Void},Cint,Cint,Ptr{DBoptlist}),arg1,arg2,arg3,arg4,arg5,arg6,arg7)
+function DBPutPointmesh(arg1::Ptr{DBfile},arg2::Ptr{UInt8},arg3::Cint,arg4::Ptr{Ptr{Void}},arg5::Cint,arg6::Cint,arg7::Ptr{DBoptlist})
+  ccall((:DBPutPointmesh,libsilo),Cint,(Ptr{DBfile},Ptr{UInt8},Cint,Ptr{Ptr{Void}},Cint,Cint,Ptr{DBoptlist}),arg1,arg2,arg3,arg4,arg5,arg6,arg7)
 end
 
 function DBPutPointvar(arg1::Ptr{DBfile},arg2::Ptr{UInt8},arg3::Ptr{UInt8},arg4::Cint,arg5::Ptr{Void},arg6::Cint,arg7::Cint,arg8::Ptr{DBoptlist})
